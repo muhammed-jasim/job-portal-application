@@ -63,7 +63,7 @@ class Jobs(models.Model):
     experience = models.IntegerField()
     min_salary = models.CharField(max_length=100)
     max_salary = models.CharField(max_length=100)
-    vacancy = models.IntegerField(null=True)
+    vacancy = models.IntegerField(null=True) 
     updated_at = models.DateField(auto_now=True, null=True)
     
     def __str__(self):
