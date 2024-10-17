@@ -1,0 +1,112 @@
+{% extends 'admin/base.html' %}
+
+{% block main %}
+      {% if job_created %}
+      <span style="color:green;fornt-weight:bold;">You have successfully added the job , Title : {{title}}</span>
+      {% endif %}
+      <p>Add new job here</p>
+      <form class="w-50 mx-auto" method="post" action="{% url 'create-job' %}">
+            {% csrf_token %}
+            
+            <h2 class="text-center mb-4">Create Job Listing</h2>
+            
+            <div class="mb-3">
+                <label for="job-title" class="form-label">Job Title</label>
+                <input id="job-title" type="text" name="title" class="form-control" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="location" class="form-label">Job Locationn</label>
+                <select id="location" class="form-control" name="location" required>
+                    <option value="" disabled selected>Select Location</option>
+                    {% for value, display in job_location %}
+                        <option value="{{ value }}">{{ display }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="qualification" class="form-label">Qualification</label>
+                <input type="text" class="form-control" name="qualification" id="qualification" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="skills" class="form-label">Skills</label>
+                <input type="text" class="form-control" name="skills" id="skills" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="job-category" class="form-label">Category</label>
+                <select id="job-category" class="form-control" name="job-category" required>
+                    <option value="" disabled selected>Select a Category</option>
+                    {% for value, display in categories %}
+                        <option value="{{ value }}">{{ display }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                  <label>Job Type</label>
+                  <select class="form-control" name="job-type" required>
+                    <option value="" disabled selected>Select Job Type</option>
+                    {% for value, display in job_types %}
+                        <option value="{{ value }}">{{ display }}</option>
+                    {% endfor %}
+                  </select>
+            </div>      
+            
+            <div class="mb-3">
+                <label for="min-age" class="form-label">Minimum Age</label>
+                <input type="number" class="form-control" name="min-age" id="min-age" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="max-age" class="form-label">Maximum Age</label>
+                <input type="number" class="form-control" name="max-age" id="max-age" required>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <div>
+                    <input type="radio" value="male" name="gender" id="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" value="female" name="gender" id="female">
+                    <label for="female">Female</label>
+                    <input type="radio" value="not specified" name="gender" id="not-specified" required>
+                    <label for="not-specified">Not Specified</label>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="experience" class="form-label">Experience (in years)</label>
+                <input type="number" name="experience" class="form-control" id="experience" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="min-salary" class="form-label">Minimum Salary</label>
+                <input type="number" name="min_salary" class="form-control" id="min-salary" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="max-salary" class="form-label">Maximum Salary</label>
+                <input type="number" name="max_salary" class="form-control" id="max-salary" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="vacancy" class="form-label">Vacancies</label>
+                <input type="number" name="vacancy" class="form-control" id="vacancy" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100">Save Job Listing</button>
+        </form>
+           
+
+{% endblock %}
+<script>
+      function filterJobs() {
+            const jobType = document.getElementById('jobTypeDropdown').value;
+            // Implement filtering logic here based on the selected job type
+            console.log("Selected Job Type: ", jobType);
+        }
+        
+</script>

@@ -1,0 +1,150 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block main %}
+    <main>
+
+        <!-- Hero Area Start-->
+        <div class="slider-area ">
+        <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/about.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>About us</h2>
+                                <p style="color:white;">
+                                <span>PARKAR CONSULTANTS</span>
+                                is established in millennium year 2000 is one of the leading recruiting, travel
+                                and tourism industry with its headquarter in Mumbai having its branches in New Delhi. Being vision of
+                                
+                                PARKAR AGENCY established in 1912, we have name and fame in the market.
+                                
+                                As William James rightly quoted "It is our attitude at the beginning of the difficult tack, which is more than
+                                anything else, will affect its successful outcome." It is with this belief that Director's who has been
+                                instrumental in being the driving force behind the success and reputation' that ithas earned over the years.
+                                
+                                Being in such a dynamic industry, it is imperation to be updated about the happenings around and our exclusive
+                                
+                                memberships with IATA serves that every purpose.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Hero Area End -->
+
+
+        {% comment %} about management {% endcomment %}
+        <div class="home-blog-area blog-h-padding">
+          <div class="container">
+            <!-- Section Tittle -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-tittle text-center">
+                  {% comment %} <span>Our services</span> {% endcomment %}
+                  <h2>Our Team</h2>
+                </div>
+              </div>
+            </div>
+    
+    
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="home-blog-single mb-30">
+                  <div class="blog-img-cap">
+                    <div class="blog-img">
+                      <img
+                        class='img'
+                        src="{% static 'images/md.jpg' %}"
+                        alt=""
+                      />
+                      <!-- Blog date -->
+                      
+                    </div>
+                    <div class="blog-cap">
+                      {% comment %} <p>| Placement</p> {% endcomment %}
+                      <h4>Managing director</h4>
+                      {% comment %} <a href="#" class="more-btn">Read more »</a> {% endcomment %}
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="home-blog-single mb-30">
+                  <div class="blog-img-cap">
+                    <div class="blog-img">
+                      <img
+                        class='img'
+                        src="{% static 'images/md.jpg' %}"
+                        alt=""
+                      />
+                      <!-- Blog date -->
+                
+                    </div>
+                    <div class="blog-cap">
+                      <h4>Managing director</h4>
+                      {% comment %} <a href="#" class="more-btn">Read more »</a> {% endcomment %}
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        {% comment %} about management end  {% endcomment %}
+        <!-- Support Company Start-->
+        <div class="support-company-area support-padding fix">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6">
+                  <div class="right-caption">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle section-tittle2">
+                      <span>What we are doing</span>
+                    </div>
+                    <div class="support-caption">
+                    
+                      <h2>SERVICES</h2>
+                      <p >
+                        We are one of the leading Recruiting and Manpower Supplying Company to Overseas Countries with years
+                        
+                        of commendable track record high quality manpower in recruiting & also an IATA Accredited Agent with
+                        
+                        International and Domestic Air Ticketing, Haj & Umrah Packages.
+                      </p>
+
+                      {% comment %} vision {% endcomment %}
+                      <h2>MISSION</h2>
+                      <p>To take PARKAR CONSULTANTS beyond the normal stereotypes of travel agents and our effort so far’
+                        have been materializing with unmatched success. We aim to simplify the travels needs of all customers & have
+                        
+                        a strong commitment to serve the clients round the clock.
+                        
+                        The unmatched strong commitment of the company comes from the fact we promise to serve all the time 24
+                        
+                        hours under all circumstances.
+                        
+                        We look forward to extend our services for our customers & the entire fraternity in every possible way because
+                        
+                        ing together we can makea difference.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                  <div class="support-location-img">
+                    <img
+                      src="{% static 'assets/img/service/support-img.jpg' %}"
+                      alt=""
+                    />
+                    <div class="support-img-cap text-center">
+                      <p>Since</p>
+                      <span>2000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Support Company End-->
+{% endblock %}
